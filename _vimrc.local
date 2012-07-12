@@ -5,5 +5,7 @@ call pathogen#helptags()
 
 set t_Co=256                " use 256 colors
 set background=light        " use a light background
-colorscheme solarized       " load solarized color scheme
 set relativenumber          " display line numbers relative to the current line
+set colorcolumn=80          " display a subtle bar after 80 chars
+
+colorscheme solarized       " load solarized color scheme
