@@ -1,0 +1,91 @@
+xsource $HOME/.zshrc.envs
+xsource $HOME/.zshrc.aliases
+
+# Use solarized dircolors.
+eval `dircolors $HOME/.dircolors`
+
+# use the vi navigation keys (hjkl) besides cursor keys in menu completion
+bindkey -M menuselect 'h' vi-backward-char        # left
+bindkey -M menuselect 'k' vi-up-line-or-history   # up
+bindkey -M menuselect 'l' vi-forward-char         # right
+bindkey -M menuselect 'j' vi-down-line-or-history # bottom
+
+# set command prediction from history, see 'man 1 zshcontrib'
+is4 && zrcautoload predict-on && \
+zle -N predict-on         && \
+zle -N predict-off        && \
+bindkey "^X^Z" predict-on && \
+bindkey "^Z" predict-off
+
+# just type '...' to get '../..'
+rationalise-dot() {
+local MATCH
+if [[ $LBUFFER =~ '(^|/| |	|'$'\n''|\||;|&)\.\.$' ]]; then
+  LBUFFER+=/
+  zle self-insert
+  zle self-insert
+else
+  zle self-insert
+fi
+}
+zle -N rationalise-dot
+bindkey . rationalise-dot
+# without this, typing a . aborts incremental history search
+bindkey -M isearch . self-insert
+
+bindkey '\eq' push-line-or-edit
+
+## some popular options ##
+
+# add `|' to output redirections in the history
+setopt histallowclobber
+
+# warning if file exists ('cat /dev/null > ~/.zshrc')
+setopt NO_clobber
+
+# don't warn me about bg processes when exiting
+setopt nocheckjobs
+
+# alert me if something failed
+setopt printexitvalue
+
+# with spelling correction, assume dvorak kb
+setopt dvorak
+
+# Allow comments even in interactive shells
+setopt interactivecomments
+
+## Set a search path for the cd builtin
+cdpath=(.. ~)
+
+## variation of our manzsh() function; pick you poison:
+manzsh()  { /usr/bin/man zshall |  most +/"$1" ; }
+
+## Switching shell safely and efficiently? http://www.zsh.org/mla/workers/2001/msg02410.html
+bash() {
+    NO_SWITCH="yes" command bash "$@"
+}
+restart () {
+    exec $SHELL $SHELL_ARGS "$@"
+}
+
+# ctrl-s will no longer freeze the terminal.
+stty erase "^?"
+
+# Some quick Perl-hacks aka /useful/ oneliner
+bew() { perl -le 'print unpack "B*","'$1'"' }
+web() { perl -le 'print pack "B*","'$1'"' }
+hew() { perl -le 'print unpack "H*","'$1'"' }
+weh() { perl -le 'print pack "H*","'$1'"' }
+pversion()    { perl -M$1 -le "print $1->VERSION" } # i. e."pversion LWP -> 5.79"
+getlinks ()   { perl -ne 'while ( m/"((www|ftp|http):\/\/.*?)"/gc ) { print $1, "\n"; }' $* }
+gethrefs ()   { perl -ne 'while ( m/href="([^"]*)"/gc ) { print $1, "\n"; }' $* }
+getanames ()  { perl -ne 'while ( m/a name="([^"]*)"/gc ) { print $1, "\n"; }' $* }
+getforms ()   { perl -ne 'while ( m:(\</?(input|form|select|option).*?\>):gic ) { print $1, "\n"; }' $* }
+getstrings () { perl -ne 'while ( m/"(.*?)"/gc ) { print $1, "\n"; }' $*}
+etanchors () { perl -ne 'while ( m/«([^«»\n]+)»/gc ) { print $1, "\n"; }' $* }
+showINC ()    { perl -e 'for (@INC) { printf "%d %s\n", $i++, $_ }' }
+vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
+vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
+
+# vim:filetype=zsh
