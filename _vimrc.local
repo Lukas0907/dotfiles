@@ -1,0 +1,9 @@
+" Run pathogen to load plugins, colorschemes, etc. under ~/.vim/autoload.
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
+syntax on
+filetype plugin indent on
+
+set background=light        " use a light background
+colorscheme solarized       " load solarized color scheme
+set relativenumber          " display line numbers relative to the current line
