@@ -1,9 +1,10 @@
+alias CH="./configure --help"
+alias CO="./configure"
+alias s="ssh"
 # Without this solarized and vim don't work together from tmux.
 alias tmux="TERM=screen-256color-bce tmux -2"
 # get top 10 shell commands:
 alias top10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
-alias CO="./configure"
-alias CH="./configure --help"
 
 alias -g BG='& exit'
 alias -g C='|wc -l'
