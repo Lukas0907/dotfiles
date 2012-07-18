@@ -16,4 +16,4 @@
 	tagme = !sh -c '[ -z "$1" ] && exit 1 || git tag -s \"$1\" -m \"Release \"$1\"\"' sh
 	tush = push --tags
 
-# vim:filetype=gitconfig
+# vim:ft=gitconfig
