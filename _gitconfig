@@ -11,9 +11,11 @@
 	ca = commit -a
 	ci = commit
 	co = checkout
+	d = diff
+	dc = diff --cached
 	m = checkout master
 	s = status --short
-	tagme = !sh -c '[ -z "$1" ] && exit 1 || git tag -s \"$1\" -m \"Release \"$1\"\"' sh
+	tagme = !sh -c '[ -z "$1" ] && exit 1 || git tag \"$1\" -m \"Release \"$1\"\"' sh
 	tush = push --tags
 
 # vim:ft=gitconfig
