@@ -16,7 +16,10 @@
 	dw = diff --word-diff
 	dc = diff --cached
 	dcw = diff --cached --word-diff
-	lg = log --abbrev-commit --abbrev=6 --pretty=oneline
+	dh = diff HEAD
+	dhw = diff HEAD --word-diff
+	lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s \
+		%C(white)- %an, %ar%Creset'
 	m = checkout master
 	s = status --short
 	# Allow users to access the current repo via git://hostname/
