@@ -14,14 +14,15 @@
 	co = checkout
 	d = diff
 	dc = diff --cached
+	lg = log --abbrev-commit --abbrev=6 --pretty=oneline
 	m = checkout master
 	s = status --short
-	tagme = !sh -c '[ -z "$1" ] && exit 1 || git tag \"$1\" -m \
-		\"Release \"$1\"\"' sh
-	tush = push --tags
 	# Allow users to access the current repo via git://hostname/
 	# `git ls-remote git://localhost/` (Don't forget the concluding "/"!)
 	serve = !git daemon --reuseaddr --verbose --base-path=. \
 		--export-all ./.git
+	tagme = !sh -c '[ -z "$1" ] && exit 1 || git tag \"$1\" -m \
+		\"Release \"$1\"\"' sh
+	tush = push --tags
 
 # vim:ft=gitconfig
