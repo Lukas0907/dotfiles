@@ -1,4 +1,7 @@
-#!/bin/sh -ex
+#!/bin/sh
+
+set -e
+set -x
 
 git submodule init && git submodule update
 
