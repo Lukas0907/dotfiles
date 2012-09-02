@@ -13,7 +13,9 @@
 	ci = commit
 	co = checkout
 	d = diff
+	dw = diff --word-diff
 	dc = diff --cached
+	dcw = diff --cached --word-diff
 	lg = log --abbrev-commit --abbrev=6 --pretty=oneline
 	m = checkout master
 	s = status --short
