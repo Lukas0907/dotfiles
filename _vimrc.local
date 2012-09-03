@@ -3,9 +3,19 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-set t_Co=256                " use 256 colors
-set background=light        " use a light background
-set relativenumber          " display line numbers relative to the current line
-set colorcolumn=80          " display a subtle bar after 80 chars
+" Colors
+set t_Co=256                " Use 256 colors
+set background=light        " Use a light background
+colorscheme solarized       " Load solarized color scheme
 
-colorscheme solarized       " load solarized color scheme
+set relativenumber          " Display line numbers relative to the current line.
+
+" Maximum width of text
+set textwidth=80            " A longer line will be broken after white space to get this width.
+set colorcolumn=80          " Display a subtle bar after 80 chars.
+
+" Tabs & Spaces
+set tabstop=8               " A <Tab> should always be displayed as 8 spaces.
+set shiftwidth=4            " However, always indent with 4 spaces.
+set softtabstop=4           " Simulate <Tab> stops every 4 spaces.
+set expandtab               " Use spaces instead of <Tab>s.
