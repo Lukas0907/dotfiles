@@ -16,7 +16,7 @@ ln -snf $PWD/grml/etc-core/etc/vim/vimrc $HOME/.vimrc
 ln -snf $PWD/_vimrc.local $HOME/.vimrc.local
 mkdir -p $HOME/.vim/bundle
 for V in $PWD/vim/*; do
-	ln -snf $V $HOME/.vim/bundle
+    ln -snf $V $HOME/.vim/bundle
 done
 
 # solarized dircolors
@@ -29,6 +29,8 @@ ln -snf $PWD/_tmux.conf $HOME/.tmux.conf
 ln -snf $PWD/_gitconfig $HOME/.gitconfig
 
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
-	echo "Changing login shell for $USER to zsh ..."
-	chsh -s `which zsh`
+    echo "Changing login shell for $USER to zsh ..."
+    chsh -s `which zsh`
 fi
+
+# vim:sw=4:sts=4:et:tw=80
