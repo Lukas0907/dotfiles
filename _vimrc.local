@@ -11,7 +11,7 @@ colorscheme solarized       " Load solarized color scheme
 set relativenumber          " Display line numbers relative to the current line.
 
 " Maximum width of text
-set textwidth=80            " A longer line will be broken after white space to get this width.
+set textwidth=78            " A longer line will be broken after white space to get this width.
 set colorcolumn=80          " Display a subtle bar after 80 chars.
 
 " Tabs & Spaces
