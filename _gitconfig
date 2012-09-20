@@ -11,6 +11,7 @@
 	b = branch
 	ca = commit -a
 	ci = commit
+	cl = clean -d -x
 	co = checkout
 	d = diff
 	dw = diff --word-diff
