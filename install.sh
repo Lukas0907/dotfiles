@@ -31,6 +31,10 @@ ln -snf $PWD/_gitconfig $HOME/.gitconfig
 # X
 ln -snf $PWD/_Xresources $HOME/.Xresources
 
+# i3
+mkdir -p $HOME/.config/i3
+ln -snf $PWD/i3/config $HOME/.config/i3
+
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
     chsh -s `which zsh`
