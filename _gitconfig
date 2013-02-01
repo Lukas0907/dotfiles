@@ -9,8 +9,8 @@
 
 [alias]
 	b = branch
-	ca = commit -a
-	ci = commit
+	ca = commit -a -v
+	ci = commit -v
 	cl = clean -d -x
 	co = checkout
 	d = diff
