@@ -28,9 +28,12 @@ ln -snf $PWD/_tmux.conf $HOME/.tmux.conf
 # git
 ln -snf $PWD/_gitconfig $HOME/.gitconfig
 
+# X
+ln -snf $PWD/_Xresources $HOME/.Xresources
+
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
     chsh -s `which zsh`
 fi
 
-# vim:sw=4:sts=4:et:tw=80
+# vim:sw=4:sts=4:et:tw=78
