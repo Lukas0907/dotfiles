@@ -20,7 +20,7 @@ for V in $PWD/vim/*; do
 done
 
 # solarized dircolors
-ln -snf $PWD/dircolors/dircolors.ansi-light $HOME/.dircolors
+ln -snf $PWD/dircolors/dircolors.ansi-dark $HOME/.dircolors
 
 # tmux
 ln -snf $PWD/_tmux.conf $HOME/.tmux.conf
