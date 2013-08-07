@@ -1,0 +1,12 @@
+[submodule "vim/pathogen"]
+	path = vim/pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "dircolors"]
+	path = dircolors
+	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "vim/solarized"]
+	path = vim/solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "grml/etc-core"]
+	path = grml/etc-core
+	url = https://github.com/grml/grml-etc-core.git
