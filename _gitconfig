@@ -31,4 +31,7 @@
 		\"Release \"$1\"\"' sh
 	tush = push --tags
 
+[push]
+	default = matching
+
 # vim:ft=gitconfig
