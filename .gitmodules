@@ -25,6 +25,6 @@
 [submodule "vim/tlib"]
 	path = vim/tlib
 	url = git://github.com/tomtom/tlib_vim.git
-[submodule "vim/snipmate-snippets"]
-	path = vim/snipmate-snippets
-	url = git://github.com/honza/snipmate-snippets.git
+[submodule "vim/vim-snippets"]
+	path = vim/vim-snippets
+	url = https://github.com/honza/vim-snippets
