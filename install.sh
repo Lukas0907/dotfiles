@@ -20,20 +20,13 @@ for V in $PWD/vim/*; do
 done
 
 # solarized dircolors
-ln -snf $PWD/dircolors/dircolors.ansi-dark $HOME/.dircolors
+ln -snf $PWD/dircolors/dircolors.ansi-light $HOME/.dircolors
 
 # tmux
 ln -snf $PWD/_tmux.conf $HOME/.tmux.conf
 
 # git
 ln -snf $PWD/_gitconfig $HOME/.gitconfig
-
-# X
-ln -snf $PWD/_Xresources $HOME/.Xresources
-
-# i3
-mkdir -p $HOME/.config/i3
-ln -snf $PWD/i3/config $HOME/.config/i3
 
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
