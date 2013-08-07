@@ -18,13 +18,13 @@
 	url = git://git.wincent.com/command-t.git
 [submodule "vim/snipmate"]
 	path = vim/snipmate
-	url = git://github.com/garbas/vim-snipmate.git
+	url = https://github.com/garbas/vim-snipmate.git
 [submodule "vim/mw-utils"]
 	path = vim/mw-utils
-	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "vim/tlib"]
 	path = vim/tlib
-	url = git://github.com/tomtom/tlib_vim.git
+	url = https://github.com/tomtom/tlib_vim.git
 [submodule "vim/vim-snippets"]
 	path = vim/vim-snippets
 	url = https://github.com/honza/vim-snippets
