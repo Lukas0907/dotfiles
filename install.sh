@@ -3,7 +3,9 @@
 set -e
 set -x
 
-git submodule init && git submodule update
+git submodule update --init
+git submodule foreach checkout master
+git submodule foreach pull
 
 # zsh
 ln -snf $PWD/grml/etc-core/etc/zsh/zshrc $HOME/.zshrc
