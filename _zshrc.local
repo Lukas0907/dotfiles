@@ -2,7 +2,7 @@ xsource $HOME/.zshrc.envs
 xsource $HOME/.zshrc.aliases
 
 # Use solarized dircolors.
-eval `dircolors $HOME/.dircolors`
+eval `dircolors $HOME/.config/dircolors`
 
 # use the vi navigation keys (hjkl) besides cursor keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char        # left

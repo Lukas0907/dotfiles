@@ -4,8 +4,8 @@ set -e
 set -x
 
 git submodule update --init
-git submodule foreach checkout master
-git submodule foreach pull
+git submodule foreach git checkout master
+git submodule foreach git pull
 
 # zsh
 ln -snf $PWD/grml/etc-core/etc/zsh/zshrc $HOME/.zshrc
@@ -22,13 +22,15 @@ for V in $PWD/vim/*; do
 done
 
 # solarized dircolors
-ln -snf $PWD/dircolors/dircolors.ansi-light $HOME/.dircolors
+ln -snf $PWD/dircolors/dircolors.ansi-light $HOME/.config/dircolors
 
 # tmux
-ln -snf $PWD/_tmux.conf $HOME/.tmux.conf
+mkdir -p $HOME/.config/tmux
+ln -snf $PWD/tmux/config $HOME/.config/tmux/config
 
 # git
-ln -snf $PWD/_gitconfig $HOME/.gitconfig
+mkdir -p $HOME/.config/git
+ln -snf $PWD/git/config $HOME/.config/git/config
 
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
