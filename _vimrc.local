@@ -18,4 +18,19 @@ set shiftwidth=4            " However, always indent with 4 spaces.
 set softtabstop=4           " Simulate <Tab> stops every 4 spaces.
 set expandtab               " Use spaces instead of <Tab>s.
 
+" Search
+set smartcase               " Ignore case only if pattern doesn't contain uppercase chars
+set incsearch               " While typing a search command, show where the pattern matches
+
+" Handle tmux $TERM quirks in vim
+if $TERM =~ '^screen-256color$'
+  map <Esc>OH <Home>
+  map! <Esc>OH <Home>
+  map <Esc>OF <End>
+  map! <Esc>OF <End>
+endif
+
+" Show tabs and trailing spaces.
+set list
+set listchars=tab:»·,trail:·
 set relativenumber          " Display line numbers relative to the current line.
