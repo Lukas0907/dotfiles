@@ -9,9 +9,9 @@
 
 [alias]
 	b = branch
+	c = clean -f -d -x
 	ca = commit -a -v
 	ci = commit -v
-	cl = clean -d -x
 	co = checkout
 	d = diff
 	dw = diff --word-diff
@@ -33,5 +33,8 @@
 
 [push]
 	default = matching
+
+[core]
+	excludesfile = ~/.config/git/ignore
 
 # vim:ft=gitconfig

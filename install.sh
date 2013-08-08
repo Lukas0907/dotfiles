@@ -31,6 +31,7 @@ ln -snf $PWD/tmux/config $HOME/.config/tmux/config
 # git
 mkdir -p $HOME/.config/git
 ln -snf $PWD/git/config $HOME/.config/git/config
+ln -snf $PWD/git/ignore $HOME/.config/git/ignore
 
 # xfce4-terminal
 mkdir -p $HOME/.config/xfce4/terminal
