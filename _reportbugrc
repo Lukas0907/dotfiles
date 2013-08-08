@@ -1,0 +1,20 @@
+# reportbug preferences file
+# character encoding: UTF-8
+# Version of reportbug this preferences file was written by
+reportbug_version "6.4.4ubuntu1"
+# default operating mode: one of: novice, standard, advanced, expert
+mode standard
+# default user interface
+ui text
+# name and email setting (if non-default)
+realname "Lukas Anzinger"
+email "l.anzinger@gmail.com"
+# Send all outgoing mail via the following host
+smtphost "smtp.gmail.com:587"
+smtpuser "l.anzinger@gmail.com"
+#smtppasswd "my password here"
+# Enable TLS for the SMTP host
+smtptls
+# You can add other settings after this line.  See
+# /etc/reportbug.conf for a full listing of options.
+bts debian

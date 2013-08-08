@@ -40,6 +40,9 @@ ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
 # devscripts (dch)
 ln -snf $PWD/_devscripts $HOME/.devscripts
 
+# Debian bug reporting tool
+ln -snf $PWD/_reportbugrc $HOME/.reportbugrc
+
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
     chsh -s `which zsh`
