@@ -1,5 +1,3 @@
-alias CH="./configure --help"
-alias CO="./configure"
 alias s="ssh"
 # Without this solarized and vim don't work together from tmux.
 alias tmux="TERM=screen-256color-bce tmux -2 -f ~/.config/tmux/config"
