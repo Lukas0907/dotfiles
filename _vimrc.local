@@ -17,6 +17,8 @@ set tabstop=8               " A <Tab> should always be displayed as 8 spaces.
 set shiftwidth=4            " However, always indent with 4 spaces.
 set softtabstop=4           " Simulate <Tab> stops every 4 spaces.
 set expandtab               " Use spaces instead of <Tab>s.
+" Don't expand tabs in makefiles by using default tab config.
+autocmd FileType make setlocal shiftwidth=8 softtabstop=0 noexpandtab
 
 " Search
 set smartcase               " Ignore case only if pattern doesn't contain uppercase chars
