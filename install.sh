@@ -40,6 +40,9 @@ ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
 # devscripts (dch)
 ln -snf $PWD/_devscripts $HOME/.devscripts
 
+# git-buildpackage
+ln -snf $PWD/_gbp.conf $HOME/.gbp.conf
+
 # Debian bug reporting tool
 ln -snf $PWD/_reportbugrc $HOME/.reportbugrc
 
