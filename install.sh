@@ -36,6 +36,8 @@ ln -snf $PWD/git/ignore $HOME/.config/git/ignore
 # xfce4-terminal
 mkdir -p $HOME/.config/xfce4/terminal
 ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
+ln -snf $PWD/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
+    $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 
 # devscripts (dch)
 ln -snf $PWD/_devscripts $HOME/.devscripts
