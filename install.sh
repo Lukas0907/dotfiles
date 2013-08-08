@@ -37,6 +37,9 @@ ln -snf $PWD/git/ignore $HOME/.config/git/ignore
 mkdir -p $HOME/.config/xfce4/terminal
 ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
 
+# devscripts (dch)
+ln -snf $PWD/_devscripts $HOME/.devscripts
+
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
     chsh -s `which zsh`
