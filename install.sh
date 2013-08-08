@@ -32,6 +32,10 @@ ln -snf $PWD/tmux/config $HOME/.config/tmux/config
 mkdir -p $HOME/.config/git
 ln -snf $PWD/git/config $HOME/.config/git/config
 
+# xfce4-terminal
+mkdir -p $HOME/.config/xfce4/terminal
+ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
+
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
     chsh -s `which zsh`
