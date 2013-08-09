@@ -39,14 +39,11 @@ ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
 ln -snf $PWD/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
     $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 
-# devscripts (dch)
-ln -snf $PWD/_devscripts $HOME/.devscripts
-
-# git-buildpackage
-ln -snf $PWD/_gbp.conf $HOME/.gbp.conf
-
-# Debian bug reporting tool
+# Debian packaging tools
 ln -snf $PWD/_reportbugrc $HOME/.reportbugrc
+ln -snf $PWD/_devscripts $HOME/.devscripts
+ln -snf $PWD/_gbp.conf $HOME/.gbp.conf
+ln -snf $PWD/_lintianrc $HOME/.lintianrc
 
 if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
