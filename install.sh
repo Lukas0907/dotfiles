@@ -33,11 +33,14 @@ mkdir -p $HOME/.config/git
 ln -snf $PWD/git/config $HOME/.config/git/config
 ln -snf $PWD/git/ignore $HOME/.config/git/ignore
 
-# xfce4-terminal
-mkdir -p $HOME/.config/xfce4/terminal
-ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
-ln -snf $PWD/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
-    $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+if [ -d $HOME/.config/xfce4 ]; then
+    # xfce4-terminal
+    mkdir -p $HOME/.config/xfce4/terminal
+    ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
+    mkdir -p $HOME/.config/xfconf/xfce-perchannel-xml
+    ln -snf $PWD/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
+        $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+fi
 
 # Debian packaging tools
 ln -snf $PWD/_reportbugrc $HOME/.reportbugrc
