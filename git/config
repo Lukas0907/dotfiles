@@ -21,6 +21,9 @@
 	dhw = diff HEAD --word-diff
 	lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s \
 		%C(white)- %an, %ar%Creset'
+	r = rebase
+	ri = rebase -i
+	rc = rebase --continue
 	m = checkout master
 	s = status --short
 	# Allow users to access the current repo via git://hostname/
