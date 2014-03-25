@@ -1,6 +1,3 @@
-xsource $HOME/.zshrc.envs
-xsource $HOME/.zshrc.aliases
-
 # Use solarized dircolors.
 eval `dircolors $HOME/.config/dircolors`
 
@@ -87,5 +84,14 @@ etanchors () { perl -ne 'while ( m/«([^«»\n]+)»/gc ) { print $1, "\n"; }' $* }
 showINC ()    { perl -e 'for (@INC) { printf "%d %s\n", $i++, $_ }' }
 vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
 vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
+
+# virtualenv
+function virtual_env_prompt () {
+    REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
+}
+grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
+
+xsource $HOME/.zshrc.envs
+xsource $HOME/.zshrc.aliases
 
 # vim:filetype=zsh

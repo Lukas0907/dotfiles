@@ -18,7 +18,4 @@ alias -g S='| sort'
 alias -g T='|tail'
 alias -g V='| vim -'
 
-# /usr/bin/ag (the-silver-searcher) interfears with grml's ag alias
-unalias ag
-
 # vim:ft=zsh
