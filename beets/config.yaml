@@ -1,0 +1,15 @@
+directory: ~/Music/Archive
+library: ~/Music/beets.blb
+plugins: scrub embedart the zero
+id3v23: yes
+
+paths:
+    default: %the{$albumartist}/$year - $album%aunique{}/$track $title
+    singleton: Non-Album/$artist/$title
+    comp: Compilations/$year - $album%aunique{}/$track $artist - $title
+
+zero:
+    fields: comments
+
+import:
+    move: yes

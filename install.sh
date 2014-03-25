@@ -33,14 +33,13 @@ mkdir -p $HOME/.config/git
 ln -snf $PWD/git/config $HOME/.config/git/config
 ln -snf $PWD/git/ignore $HOME/.config/git/ignore
 
-if [ -d $HOME/.config/xfce4 ]; then
-    # xfce4-terminal
-    mkdir -p $HOME/.config/xfce4/terminal
-    ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
-    mkdir -p $HOME/.config/xfconf/xfce-perchannel-xml
-    ln -snf $PWD/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
-        $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-fi
+# xfce4-terminal
+mkdir -p $HOME/.config/xfce4/terminal
+ln -snf $PWD/xfce4/terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
+mkdir -p $HOME/.config/xfconf/xfce-perchannel-xml
+ln -snf $PWD/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
+    $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+
 
 # Debian packaging tools
 ln -snf $PWD/_reportbugrc $HOME/.reportbugrc
@@ -52,5 +51,8 @@ if ! grep -q "^$USER:.*zsh$" /etc/passwd; then
     echo "Changing login shell for $USER to zsh ..."
     chsh -s `which zsh`
 fi
+
+mkdir -p "$HOME/.config/beets"
+ln -snf $PWD/beets/config.yaml $HOME/.config/beets/config.yaml
 
 # vim:sw=4:sts=4:et:tw=78
