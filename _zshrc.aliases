@@ -18,4 +18,6 @@ alias -g S='| sort'
 alias -g T='|tail'
 alias -g V='| vim -'
 
+[ -x /usr/bin/ag ] && unalias ag
+
 # vim:ft=zsh
