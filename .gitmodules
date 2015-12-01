@@ -13,9 +13,6 @@
 [submodule "vim/fugitive"]
 	path = vim/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/command-t"]
-	path = vim/command-t
-	url = https://github.com/wincent/Command-T.git
 [submodule "vim/snipmate"]
 	path = vim/snipmate
 	url = https://github.com/garbas/vim-snipmate.git
