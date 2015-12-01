@@ -40,6 +40,14 @@ mkdir -p $HOME/.config/xfconf/xfce-perchannel-xml
 ln -snf $PWD/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
     $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 
+# vim powerline fonts
+mkdir -p $HOME/.fonts
+ln -snf $PWD/powerline/PowerlineSymbols.otf $HOME/.fonts
+fc-cache -vf ~/.fonts/
+
+mkdir -p $HOME/.config/fontconfig/conf.d
+ln -snf $PWD/powerline/10-powerline-symbols.conf $HOME/.config/fontconfig/conf.d
+
 
 # Debian packaging tools
 ln -snf $PWD/_reportbugrc $HOME/.reportbugrc

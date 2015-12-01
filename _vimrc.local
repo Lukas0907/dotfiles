@@ -36,3 +36,6 @@ endif
 set list
 set listchars=tab:»·,trail:·
 set relativenumber          " Display line numbers relative to the current line.
+
+" airline
+let g:airline_powerline_fonts = 1
