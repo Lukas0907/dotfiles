@@ -3,6 +3,9 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+" Enable filetype plugins
+filetype plugin on
+
 " Colors
 set syntax=on
 set t_Co=16
@@ -44,3 +47,7 @@ let g:ctrlp_cmd = "CtrlPMixed"
 let g:airline_powerline_fonts = 1
 " ignore files in .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" Remap Flake8 to F3 (F7 is already used by grml-vim)
+autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
+autocmd BufWritePost *.py call Flake8()
