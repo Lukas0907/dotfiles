@@ -41,3 +41,5 @@
 	excludesfile = ~/.config/git/ignore
 
 # vim:ft=gitconfig
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring

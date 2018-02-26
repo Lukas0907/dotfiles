@@ -1,6 +1,6 @@
 directory: ~/Music/Archive
 library: ~/Music/beets.blb
-plugins: scrub embedart the zero
+plugins: scrub embedart the zero fetchart embedart rewrite
 id3v23: yes
 
 paths:
@@ -8,8 +8,14 @@ paths:
     singleton: Non-Album/$artist/$title
     comp: Compilations/$year - $album%aunique{}/$track $artist - $title
 
+the:
+    patterns: ^Der ^Die ^Das
+
 zero:
     fields: comments
 
 import:
     move: yes
+
+fetchart:
+    google_search: yes
